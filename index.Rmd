@@ -1,6 +1,6 @@
 ---
-title: "A Book"
-author: "Frida Gomam"
+title: "Notes for Semester Project"
+author: "Sasi Mitra"
 site: bookdown::bookdown_site
 documentclass: book
 output:
@@ -8,10 +8,9 @@ output:
   #bookdown::pdf_book: default
 ---
 
-# Hello World
+# Notes for Semester Project
 
-Hi.
+I'm writing stuff here and compiling all my detailed notes for the Semester Project. Wish me luck, hope this thing turns out nice by the end.
 
-Bye.
 
 <!-- If you need PDF output, uncomment bookdown::pdf_book above in YAML. You will need a LaTeX installation, e.g., https://yihui.name/tinytex/ -->
