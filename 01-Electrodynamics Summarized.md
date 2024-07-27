@@ -2,6 +2,8 @@
 
 Fluid Dynamics are written with Volumetric Equations, and thus to incorporate Electrodynamics in them, we have to write Electrodynamics Equations also in a Volumetric formulation. This page should serve as a review of the nessecary Electrodynamics, while also deriving theese volumetric formulations nessecary for Magnetohydrodynamics.
 
+The below notes were made with reference to An Introduction to Magnetohydrodynamics by PA Davidson.[@Davidson_2001]
+
 ## Lorentz Force
 
 A charged particle with a velocity $v$ and charge $q$ experiences the force given by 
