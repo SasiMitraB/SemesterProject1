@@ -1,0 +1,19 @@
+# Minkowski Functionals
+
+## Introduction
+
+Minkowski Functionals are a set of mathematical tools used to analyze the shape and structure of data in a variety of fields, including cosmology and astrophysics. Originating from integral geometry, these functionals measure geometric properties of sets and can describe the morphology of complex structures. In cosmology, Minkowski Functionals are particularly valuable for studying the large-scale structure of the universe, such as the distribution of galaxies and the cosmic web. They help quantify properties like the number, size, and connectivity of cosmic structures, providing insights into the underlying physical processes and the validity of cosmological models.
+
+In the study of the interstellar medium (ISM), Minkowski Functionals are employed to identify and characterize filamentary structures. These filaments, which are crucial for understanding the formation of stars and galaxies, can be challenging to detect due to their intricate and often diffuse nature. By applying Minkowski Functionals to observational data, researchers can effectively quantify the shape and distribution of these filaments, helping to elucidate their role in the ISM and improve our understanding of cosmic structure formation.
+
+A primary reference that I used when learning were the following:
+
+1. Minkowski Functionals in Cosmology, Schmalzing et al. [@schmalzing1995minkowskifunctionalscosmology],
+2. Wikipedia page for Minkowski Functionals, [@wikipediaMinkowskiFunctionals]
+
+## A few basic defintions
+
+**Functional:** A Function mapping from a Space $X$ to either Real or Complex Numbers. An example would be Linear Forms, ie, a mapping of a Vector Space to it's scalar field. 
+
+## References
+

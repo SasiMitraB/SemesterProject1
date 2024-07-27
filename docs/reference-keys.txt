@@ -4,3 +4,7 @@ lorentz-force
 volumetric-lorentz-force
 ampere-maxwells-laws
 reduced-maxwells-laws
+minkowski-functionals
+introduction
+a-few-basic-defintions
+references
