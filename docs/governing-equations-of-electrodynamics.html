@@ -79,6 +79,7 @@
 <li class="chapter" data-level="2.1.1" data-path="governing-equations-of-electrodynamics.html"><a href="governing-equations-of-electrodynamics.html#volumetric-lorentz-force"><i class="fa fa-check"></i><b>2.1.1</b> Volumetric Lorentz Force</a></li>
 </ul></li>
 <li class="chapter" data-level="2.2" data-path="governing-equations-of-electrodynamics.html"><a href="governing-equations-of-electrodynamics.html#ampere-maxwells-laws"><i class="fa fa-check"></i><b>2.2</b> Ampere Maxwell’s Laws</a></li>
+<li class="chapter" data-level="2.3" data-path="governing-equations-of-electrodynamics.html"><a href="governing-equations-of-electrodynamics.html#reduced-maxwells-laws"><i class="fa fa-check"></i><b>2.3</b> Reduced Maxwell’s Laws</a></li>
 </ul></li>
 </ul>
 
@@ -148,6 +149,24 @@ Going back to the volumetric Lorentz Force equation, we find under these assumpt
 </div>
 <div id="ampere-maxwells-laws" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Ampere Maxwell’s Laws<a href="governing-equations-of-electrodynamics.html#ampere-maxwells-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Ampere Maxwell Law is given by
+<span class="math display">\[\nabla \times \vec B = \mu \left[ \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right]\]</span>
+In conductors, this second term <span class="math inline">\(\epsilon _ 0 \frac{\partial \vec E}{\partial t}\)</span> contributes negligibly, and Maxwell’s Correction is not nessecary, leaving us with <span class="math inline">\(\nabla \times B = \mu \vec J\)</span></p>
+<p>Inverting the last equation there gives us the biot savart law.</p>
+<p><span class="math display">\[B(x) = \frac {\mu}{4 \pi} \int \frac{J(x&#39;) \times \vec r}{r^3} d^3 x&#39; \]</span></p>
+</div>
+<div id="reduced-maxwells-laws" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Reduced Maxwell’s Laws<a href="governing-equations-of-electrodynamics.html#reduced-maxwells-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>We try to write the Maxwell’s laws in a form friendly to Magnetohydrodynamics.</p>
+<p>The general form of Maxwell’s Laws are given by the following:</p>
+<p><span class="math display">\[ \nabla \cdot \vec E = \frac {\rho _l}{\epsilon _ 0}\]</span>
+<span class="math display">\[ \nabla \times \vec E = \frac {- \partial \vec B}{\partial t}\]</span>
+<span class="math display">\[ \nabla \cdot \vec B = 0\]</span>
+<span class="math display">\[ \nabla \times \vec B = \mu \left( \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right)\]</span>
+In addition to the Maxwell’s Relations the followign relations as well:</p>
+<p><span class="math display">\[\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)\]</span></p>
+<p>For MHD, $_ l $ is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.</p>
+<p><span class="math display">\[\nabla \times \vec B =\mu \vec J \\ \nabla \cdot \vec J = 0 \\ \nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\ \nabla \cdot \vec B = 0 \\  \vec J= \sigma (\vec E + \vec v \times \vec B) \\ \vec F = \vec J \times \vec B\]</span></p>
 
 </div>
 </div>

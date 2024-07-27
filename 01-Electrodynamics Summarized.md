@@ -69,6 +69,21 @@ Inverting the last equation there gives us the biot savart law.
 
 $$B(x) = \frac {\mu}{4 \pi} \int \frac{J(x') \times \vec r}{r^3} d^3 x' $$
 
-### Reduced Maxwell's Laws 
+## Reduced Maxwell's Laws 
 
-The general form of Maxwell's Laws are given by 
+We try to write the Maxwell's laws in a form friendly to Magnetohydrodynamics.
+
+The general form of Maxwell's Laws are given by the following:
+
+$$ \nabla \cdot \vec E = \frac {\rho _l}{\epsilon _ 0}$$
+$$ \nabla \times \vec E = \frac {- \partial \vec B}{\partial t}$$
+$$ \nabla \cdot \vec B = 0$$
+$$ \nabla \times \vec B = \mu \left( \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right)$$
+In addition to the Maxwell's Relations the followign relations as well: 
+
+$$\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)$$
+
+For MHD, $\rho _ l $ is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.
+
+$$\nabla \times \vec B =\mu \vec J \\ \nabla \cdot \vec J = 0 \\ \nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\ \nabla \cdot \vec B = 0 \\  \vec J= \sigma (\vec E + \vec v \times \vec B) \\ \vec F = \vec J \times \vec B$$
+

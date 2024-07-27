@@ -3,3 +3,4 @@ governing-equations-of-electrodynamics
 lorentz-force
 volumetric-lorentz-force
 ampere-maxwells-laws
+reduced-maxwells-laws
