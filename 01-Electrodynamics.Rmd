@@ -6,34 +6,67 @@ The below notes were made with reference to An Introduction to Magnetohydrodynam
 
 ## Lorentz Force
 
-A charged particle with a velocity $v$ and charge $q$ experiences the force given by 
-$$f = q \vec{E_s} + q \vec{E_i} + q (\vec{b} \times \vec{b})$$ 
-* $\vec{E_s}$ = Static Electric Field
-* $\vec{E_i}$ = Force from Varying Magnetic Field
-* $q(v\times B)$ = Lorentz Force
+A charged particle with velocity $v$ and charge $q$ experiences the force given by
 
-The static electric field is Irrotational and has a fixed divergence. 
-$$\nabla \times \vec{E_s} = 0 \:\:\:\: \nabla \cdot \vec{E_s} =  \frac{\rho_e}{\epsilon _ 0}$$
-* $\rho_e$ = Total Charge Density
-* $\epsilon_0$ = Permitivity of Free Space
+\begin{equation}
+f = q \vec{E_s} + q \vec{E_i} + q (\vec{v} \times \vec{B})
+\end{equation}
 
-The Electrostatic Potential $V$ is given by 
+where:
 
-$$\vec{E_s} = - \nabla V \:\:\: \nabla ^2 V = \frac{\rho_e}{\epsilon _ 0}$$
+\begin{itemize}
+    \item $\vec{E_s}$ = Static Electric Field
+    \item $\vec{E_i}$ = Force from Varying Magnetic Field
+    \item $q(\vec{v} \times \vec{B})$ = Lorentz Force
+\end{itemize}
 
-The total electric field given by $\vec{E_s} + \vec{E_i} = \vec{E}$ is subject to the following constraints. 
+The static electric field is irrotational and has a fixed divergence:
 
-$$\nabla \cdot \vec{E} =  \frac{\rho_e}{\epsilon _ 0} \:\:\: \text{Gauss Law}\\ \nabla \times \vec E = \frac {\partial \vec B}{\partial t} \:\:\: \:\:\text{Faraday's Law}$$
+\begin{equation}
+\nabla \times \vec{E_s} = 0
+\end{equation}
 
-THe magnetic field $\vec B$ is a pseudovector, which will have consequences for Dynamo Theory.
+\begin{equation}
+\nabla \cdot \vec{E_s} = \frac{\rho_e}{\epsilon_0}
+\end{equation}
+
+where:
+
+\begin{itemize}
+    \item $\rho_e$ = Total Charge Density
+    \item $\epsilon_0$ = Permittivity of Free Space
+\end{itemize}
+
+
+The Electrostatic Potential $V$ is given by:
+
+\begin{equation}
+\vec{E_s} = - \nabla V
+\end{equation}
+
+\begin{equation}
+\nabla^2 V = \frac{\rho_e}{\epsilon_0}
+\end{equation}
+
+The total electric field given by $\vec{E_s} + \vec{E_i} = \vec{E}$ is subject to the following constraints:
+
+\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho_e}{\epsilon_0} \quad \text{(Gauss's Law)}
+\end{equation}
+
+\begin{equation}
+\nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t} \quad \text{(Faraday's Law)}
+\end{equation}
+
+The magnetic field $\vec B$ is a pseudovector, which will have consequences for Dynamo Theory.
 
 ### Volumetric Lorentz Force
 
 Let $\vec J$ represent current density.
 
-$$\vec J = \sigma \vec E$$
+\begin{equation}\vec J = \sigma \vec E\end{equation}
 In a moving frame, the same equation can be written as 
-$$ \vec J= \sigma (\vec E + \vec v \times \vec B)$$
+\begin{equation}\vec J= \sigma (\vec E + \vec v \times \vec B)\end{equation}
 We can identify this as the Volumetric Gauss Law
 
 The Electrostatic Lorentz force is given by 
@@ -42,7 +75,7 @@ $\vec F = q (\vec E + \vec v \times B)$
 
 Dividing this by the volume, we get 
 
-$$\vec f = \rho_l \vec E + \vec J \times B$$
+\begin{equation}\vec f = \rho_l \vec E + \vec J \times B\end{equation}
 This is the volumetric Lorentz Force Equation.
 
 > **Claim**: In non Relativistic Frames, the leading $\rho_l \vec E$ term is negligible. 
@@ -59,17 +92,21 @@ This is the volumetric Lorentz Force Equation.
 > and we can neglect the term $\frac{\partial \rho_l}{\partial t}$.Rearranging the terms we get that
 > $\rho_l = - \epsilon _ 0 \tau _l \nabla \cdot ((\vec v \times \vec B)$ is very small and can be neglected as well (because $\tau _l$ is small)
 > Going back to the volumetric Lorentz Force equation, we find under these assumptions of Non-Relativistic frames, the equation reduces to 
-> $$\vec f = \vec J \times \vec B$$
+> \begin{equation}\vec f = \vec J \times \vec B\end{equation}
 
 ## Ampere Maxwell's Laws
 
 The Ampere Maxwell Law is given by 
-$$\nabla \times \vec B = \mu \left[ \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right]$$
+\begin{equation}
+\nabla \times \vec B = \mu \left[ \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right]
+\end{equation}
 In conductors, this second term $\epsilon _ 0 \frac{\partial \vec E}{\partial t}$ contributes negligibly, and Maxwell's Correction is not nessecary, leaving us with $\nabla \times B = \mu \vec J$
 
 Inverting the last equation there gives us the biot savart law.
 
-$$B(x) = \frac {\mu}{4 \pi} \int \frac{J(x') \times \vec r}{r^3} d^3 x' $$
+\begin{equation}
+B(x) = \frac {\mu}{4 \pi} \int \frac{J(x') \times \vec r}{r^3} d^3 x' 
+\end{equation}
 
 ## Reduced Maxwell's Laws 
 
@@ -77,15 +114,25 @@ We try to write the Maxwell's laws in a form friendly to Magnetohydrodynamics.
 
 The general form of Maxwell's Laws are given by the following:
 
-$$ \nabla \cdot \vec E = \frac {\rho _l}{\epsilon _ 0}$$
-$$ \nabla \times \vec E = \frac {- \partial \vec B}{\partial t}$$
-$$ \nabla \cdot \vec B = 0$$
-$$ \nabla \times \vec B = \mu \left( \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right)$$
+\begin{align}
+\nabla \cdot \vec{E} &= \frac{\rho_l}{\epsilon_0} \\
+\nabla \times \vec{E} &= - \frac{\partial \vec{B}}{\partial t} \\
+\nabla \cdot \vec{B} &= 0 \\
+\nabla \times \vec{B} &= \mu \left( \vec{J} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\end{align}
+
 In addition to the Maxwell's Relations the followign relations as well: 
 
-$$\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)$$
+\begin{equation}\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)\end{equation}
 
-For MHD, $\rho _ l $ is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.
+For MHD, $\rho_l$ is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.
 
-$$\nabla \times \vec B =\mu \vec J \\ \nabla \cdot \vec J = 0 \\ \nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\ \nabla \cdot \vec B = 0 \\  \vec J= \sigma (\vec E + \vec v \times \vec B) \\ \vec F = \vec J \times \vec B$$
+\begin{align}
+\nabla \times \vec B =\mu \vec J \\ 
+\nabla \cdot \vec J = 0 \\ 
+\nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\ 
+\nabla \cdot \vec B = 0 \\  
+\vec J= \sigma (\vec E + \vec v \times \vec B) \\ 
+\vec F = \vec J \times \vec B
+\end{align}
 

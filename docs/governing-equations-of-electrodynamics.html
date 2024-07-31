@@ -110,8 +110,15 @@ div.csl-indent {
 <li class="chapter" data-level="3.3" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#bertrands-paradox"><i class="fa fa-check"></i><b>3.3</b> Bertrand’s Paradox:</a>
 <ul>
 <li class="chapter" data-level="3.3.1" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#problem-statement"><i class="fa fa-check"></i><b>3.3.1</b> Problem Statement</a></li>
-<li class="chapter" data-level="3.3.2" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#method-1"><i class="fa fa-check"></i><b>3.3.2</b> Method 1:</a></li>
+<li class="chapter" data-level="3.3.2" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#method-1"><i class="fa fa-check"></i><b>3.3.2</b> Method 1</a></li>
+<li class="chapter" data-level="3.3.3" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#method-2"><i class="fa fa-check"></i><b>3.3.3</b> Method 2</a></li>
 </ul></li>
+<li class="chapter" data-level="3.4" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#a-diatribe-on-topolgy-and-functional-analysis"><i class="fa fa-check"></i><b>3.4</b> A Diatribe on Topolgy and Functional Analysis</a>
+<ul>
+<li class="chapter" data-level="3.4.1" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#manifold-with-a-group-of-transformations"><i class="fa fa-check"></i><b>3.4.1</b> Manifold with a Group of Transformations</a></li>
+<li class="chapter" data-level="3.4.2" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#compact-convex-set"><i class="fa fa-check"></i><b>3.4.2</b> Compact Convex Set</a></li>
+</ul></li>
+<li class="chapter" data-level="3.5" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#hadwigers-theorem"><i class="fa fa-check"></i><b>3.5</b> Hadwiger’s Theorem</a></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="references.html"><a href="references.html"><i class="fa fa-check"></i><b>4</b> References</a></li>
 </ul>
@@ -137,31 +144,45 @@ div.csl-indent {
 <p>The below notes were made with reference to An Introduction to Magnetohydrodynamics by PA Davidson.<span class="citation">[1]</span></p>
 <div id="lorentz-force" class="section level2 hasAnchor" number="2.1">
 <h2><span class="header-section-number">2.1</span> Lorentz Force<a href="governing-equations-of-electrodynamics.html#lorentz-force" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>A charged particle with a velocity <span class="math inline">\(v\)</span> and charge <span class="math inline">\(q\)</span> experiences the force given by
-<span class="math display">\[f = q \vec{E_s} + q \vec{E_i} + q (\vec{b} \times \vec{b})\]</span>
-* <span class="math inline">\(\vec{E_s}\)</span> = Static Electric Field
-* <span class="math inline">\(\vec{E_i}\)</span> = Force from Varying Magnetic Field
-* <span class="math inline">\(q(v\times B)\)</span> = Lorentz Force</p>
-<p>The static electric field is Irrotational and has a fixed divergence.
-<span class="math display">\[\nabla \times \vec{E_s} = 0 \:\:\:\: \nabla \cdot \vec{E_s} =  \frac{\rho_e}{\epsilon _ 0}\]</span>
-* <span class="math inline">\(\rho_e\)</span> = Total Charge Density
-* <span class="math inline">\(\epsilon_0\)</span> = Permitivity of Free Space</p>
-<p>The Electrostatic Potential <span class="math inline">\(V\)</span> is given by</p>
-<p><span class="math display">\[\vec{E_s} = - \nabla V \:\:\: \nabla ^2 V = \frac{\rho_e}{\epsilon _ 0}\]</span></p>
-<p>The total electric field given by <span class="math inline">\(\vec{E_s} + \vec{E_i} = \vec{E}\)</span> is subject to the following constraints.</p>
-<p><span class="math display">\[\nabla \cdot \vec{E} =  \frac{\rho_e}{\epsilon _ 0} \:\:\: \text{Gauss Law}\\ \nabla \times \vec E = \frac {\partial \vec B}{\partial t} \:\:\: \:\:\text{Faraday&#39;s Law}\]</span></p>
-<p>THe magnetic field <span class="math inline">\(\vec B\)</span> is a pseudovector, which will have consequences for Dynamo Theory.</p>
+<p>A charged particle with velocity <span class="math inline">\(v\)</span> and charge <span class="math inline">\(q\)</span> experiences the force given by</p>
+<p><span class="math display">\[\begin{equation}
+f = q \vec{E_s} + q \vec{E_i} + q (\vec{v} \times \vec{B})
+\end{equation}\]</span></p>
+<p>where:</p>
+<p>The static electric field is irrotational and has a fixed divergence:</p>
+<p><span class="math display">\[\begin{equation}
+\nabla \times \vec{E_s} = 0
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\nabla \cdot \vec{E_s} = \frac{\rho_e}{\epsilon_0}
+\end{equation}\]</span></p>
+<p>where:</p>
+<p>The Electrostatic Potential <span class="math inline">\(V\)</span> is given by:</p>
+<p><span class="math display">\[\begin{equation}
+\vec{E_s} = - \nabla V
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\nabla^2 V = \frac{\rho_e}{\epsilon_0}
+\end{equation}\]</span></p>
+<p>The total electric field given by <span class="math inline">\(\vec{E_s} + \vec{E_i} = \vec{E}\)</span> is subject to the following constraints:</p>
+<p><span class="math display">\[\begin{equation}
+\nabla \cdot \vec{E} = \frac{\rho_e}{\epsilon_0} \quad \text{(Gauss&#39;s Law)}
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\nabla \times \vec{E} = \frac{\partial \vec{B}}{\partial t} \quad \text{(Faraday&#39;s Law)}
+\end{equation}\]</span></p>
+<p>The magnetic field <span class="math inline">\(\vec B\)</span> is a pseudovector, which will have consequences for Dynamo Theory.</p>
 <div id="volumetric-lorentz-force" class="section level3 hasAnchor" number="2.1.1">
 <h3><span class="header-section-number">2.1.1</span> Volumetric Lorentz Force<a href="governing-equations-of-electrodynamics.html#volumetric-lorentz-force" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Let <span class="math inline">\(\vec J\)</span> represent current density.</p>
-<p><span class="math display">\[\vec J = \sigma \vec E\]</span>
+<p><span class="math display">\[\begin{equation}\vec J = \sigma \vec E\end{equation}\]</span>
 In a moving frame, the same equation can be written as
-<span class="math display">\[ \vec J= \sigma (\vec E + \vec v \times \vec B)\]</span>
+<span class="math display">\[\begin{equation}\vec J= \sigma (\vec E + \vec v \times \vec B)\end{equation}\]</span>
 We can identify this as the Volumetric Gauss Law</p>
 <p>The Electrostatic Lorentz force is given by</p>
 <p><span class="math inline">\(\vec F = q (\vec E + \vec v \times B)\)</span></p>
 <p>Dividing this by the volume, we get</p>
-<p><span class="math display">\[\vec f = \rho_l \vec E + \vec J \times B\]</span>
+<p><span class="math display">\[\begin{equation}\vec f = \rho_l \vec E + \vec J \times B\end{equation}\]</span>
 This is the volumetric Lorentz Force Equation.</p>
 <blockquote>
 <p><strong>Claim</strong>: In non Relativistic Frames, the leading <span class="math inline">\(\rho_l \vec E\)</span> term is negligible.</p>
@@ -177,30 +198,43 @@ So when we observe at timescales much larger than <span class="math inline">\(\t
 and we can neglect the term <span class="math inline">\(\frac{\partial \rho_l}{\partial t}\)</span>.Rearranging the terms we get that
 <span class="math inline">\(\rho_l = - \epsilon _ 0 \tau _l \nabla \cdot ((\vec v \times \vec B)\)</span> is very small and can be neglected as well (because <span class="math inline">\(\tau _l\)</span> is small)
 Going back to the volumetric Lorentz Force equation, we find under these assumptions of Non-Relativistic frames, the equation reduces to
-<span class="math display">\[\vec f = \vec J \times \vec B\]</span></p>
+<span class="math display">\[\begin{equation}\vec f = \vec J \times \vec B\end{equation}\]</span></p>
 </blockquote>
 </div>
 </div>
 <div id="ampere-maxwells-laws" class="section level2 hasAnchor" number="2.2">
 <h2><span class="header-section-number">2.2</span> Ampere Maxwell’s Laws<a href="governing-equations-of-electrodynamics.html#ampere-maxwells-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Ampere Maxwell Law is given by
-<span class="math display">\[\nabla \times \vec B = \mu \left[ \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right]\]</span>
+<span class="math display">\[\begin{equation}
+\nabla \times \vec B = \mu \left[ \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right]
+\end{equation}\]</span>
 In conductors, this second term <span class="math inline">\(\epsilon _ 0 \frac{\partial \vec E}{\partial t}\)</span> contributes negligibly, and Maxwell’s Correction is not nessecary, leaving us with <span class="math inline">\(\nabla \times B = \mu \vec J\)</span></p>
 <p>Inverting the last equation there gives us the biot savart law.</p>
-<p><span class="math display">\[B(x) = \frac {\mu}{4 \pi} \int \frac{J(x&#39;) \times \vec r}{r^3} d^3 x&#39; \]</span></p>
+<p><span class="math display">\[\begin{equation}
+B(x) = \frac {\mu}{4 \pi} \int \frac{J(x&#39;) \times \vec r}{r^3} d^3 x&#39;
+\end{equation}\]</span></p>
 </div>
 <div id="reduced-maxwells-laws" class="section level2 hasAnchor" number="2.3">
 <h2><span class="header-section-number">2.3</span> Reduced Maxwell’s Laws<a href="governing-equations-of-electrodynamics.html#reduced-maxwells-laws" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>We try to write the Maxwell’s laws in a form friendly to Magnetohydrodynamics.</p>
 <p>The general form of Maxwell’s Laws are given by the following:</p>
-<p><span class="math display">\[ \nabla \cdot \vec E = \frac {\rho _l}{\epsilon _ 0}\]</span>
-<span class="math display">\[ \nabla \times \vec E = \frac {- \partial \vec B}{\partial t}\]</span>
-<span class="math display">\[ \nabla \cdot \vec B = 0\]</span>
-<span class="math display">\[ \nabla \times \vec B = \mu \left( \vec J + \epsilon _ 0 \frac{\partial \vec E}{\partial t} \right)\]</span>
-In addition to the Maxwell’s Relations the followign relations as well:</p>
-<p><span class="math display">\[\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)\]</span></p>
-<p>For MHD, $_ l $ is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.</p>
-<p><span class="math display">\[\nabla \times \vec B =\mu \vec J \\ \nabla \cdot \vec J = 0 \\ \nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\ \nabla \cdot \vec B = 0 \\  \vec J= \sigma (\vec E + \vec v \times \vec B) \\ \vec F = \vec J \times \vec B\]</span></p>
+<p><span class="math display">\[\begin{align}
+\nabla \cdot \vec{E} &amp;= \frac{\rho_l}{\epsilon_0} \\
+\nabla \times \vec{E} &amp;= - \frac{\partial \vec{B}}{\partial t} \\
+\nabla \cdot \vec{B} &amp;= 0 \\
+\nabla \times \vec{B} &amp;= \mu \left( \vec{J} + \epsilon_0 \frac{\partial \vec{E}}{\partial t} \right)
+\end{align}\]</span></p>
+<p>In addition to the Maxwell’s Relations the followign relations as well:</p>
+<p><span class="math display">\[\begin{equation}\nabla \cdot \vec J = - \frac {\partial \rho _ l}{\partial t} \\ \vec F = q (\vec E + \vec v \times \vec B)\end{equation}\]</span></p>
+<p>For MHD, <span class="math inline">\(\rho_l\)</span> is negligible and the displacement currents are negligible, which gives us the following relations which are applicable in case of MHD.</p>
+<p><span class="math display">\[\begin{align}
+\nabla \times \vec B =\mu \vec J \\
+\nabla \cdot \vec J = 0 \\
+\nabla \times \vec E = - \frac{\partial \vec B}{\partial t} \\
+\nabla \cdot \vec B = 0 \\  
+\vec J= \sigma (\vec E + \vec v \times \vec B) \\
+\vec F = \vec J \times \vec B
+\end{align}\]</span></p>
 
 </div>
 </div>
@@ -252,7 +286,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf"],
 "search": {
 "engine": "fuse",
 "options": null

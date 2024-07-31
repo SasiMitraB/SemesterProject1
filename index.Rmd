@@ -12,6 +12,7 @@ csl: ieee.csl
 
 
 
+
 # Notes for Semester Project
 
 I'm writing stuff here and compiling all my detailed notes for the Semester Project. Wish me luck, hope this thing turns out nice by the end.

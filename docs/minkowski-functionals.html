@@ -115,9 +115,8 @@ div.csl-indent {
 </ul></li>
 <li class="chapter" data-level="3.4" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#a-diatribe-on-topolgy-and-functional-analysis"><i class="fa fa-check"></i><b>3.4</b> A Diatribe on Topolgy and Functional Analysis</a>
 <ul>
-<li class="chapter" data-level="3.4.1" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#convex-set"><i class="fa fa-check"></i><b>3.4.1</b> Convex Set</a></li>
-<li class="chapter" data-level="3.4.2" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#compact-set"><i class="fa fa-check"></i><b>3.4.2</b> Compact Set</a></li>
-<li class="chapter" data-level="3.4.3" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#compact-convex-set"><i class="fa fa-check"></i><b>3.4.3</b> Compact Convex Set</a></li>
+<li class="chapter" data-level="3.4.1" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#manifold-with-a-group-of-transformations"><i class="fa fa-check"></i><b>3.4.1</b> Manifold with a Group of Transformations</a></li>
+<li class="chapter" data-level="3.4.2" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#compact-convex-set"><i class="fa fa-check"></i><b>3.4.2</b> Compact Convex Set</a></li>
 </ul></li>
 <li class="chapter" data-level="3.5" data-path="minkowski-functionals.html"><a href="minkowski-functionals.html#hadwigers-theorem"><i class="fa fa-check"></i><b>3.5</b> Hadwiger’s Theorem</a></li>
 </ul></li>
@@ -153,14 +152,55 @@ div.csl-indent {
 <h2><span class="header-section-number">3.2</span> A few basic defintions<a href="minkowski-functionals.html#a-few-basic-defintions" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p><strong>Functional:</strong> A Function mapping from a Space <span class="math inline">\(X\)</span> to either Real or Complex Numbers. An example would be Linear Forms, ie, a mapping of a Vector Space to it’s scalar field.</p>
 <p><strong>Hausdorff metric:</strong> It quantifies how far apart the sets are by considering the worst-case scenario of points in each set relative to the other. The Hausdorff metric is defined for two non-empty subsets <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> of a metric space <span class="math inline">\((X, d)\)</span>. It is given by:</p>
-<p><span class="math display">\[ d_H(A, B) = \max \left\{ \sup_{a \in A} \inf_{b \in B} d(a, b), \sup_{b \in B} \inf_{a \in A} d(a, b) \right\}. \]</span></p>
+<p><span class="math display">\[\begin{equation} d_H(A, B) = \max \left\{ \sup_{a \in A} \inf_{b \in B} d(a, b), \sup_{b \in B} \inf_{a \in A} d(a, b) \right\}. \end{equation}\]</span></p>
 <p><strong>Manifold:</strong> A manifold is a topological space that locally resembles Euclidean space. More precisely, each point on a manifold has a neighborhood that is homeomorphic (i.e., topologically equivalent) to an open subset of <span class="math inline">\(\mathbb{R}^n\)</span></p>
+<p><strong>Groups:</strong> A <strong>Group</strong> is a set <span class="math inline">\(G\)</span> equipped with a binary operation <span class="math inline">\(\cdot\)</span> (often called multiplication) that satisfies the following four axioms:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Closure</strong>: For all <span class="math inline">\(a, b \in G\)</span>, the result of the operation <span class="math inline">\(a \cdot b\)</span> is also in <span class="math inline">\(G\)</span>.</li>
+<li><strong>Associativity</strong>: For all <span class="math inline">\(a, b, c \in G\)</span>, <span class="math inline">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span>.</li>
+<li><strong>Identity Element</strong>: There exists an element <span class="math inline">\(e \in G\)</span> such that for every element <span class="math inline">\(a \in G\)</span>, <span class="math inline">\(e \cdot a = a \cdot e = a\)</span>.</li>
+<li><strong>Inverse Element</strong>: For each <span class="math inline">\(a \in G\)</span>, there exists an element <span class="math inline">\(b \in G\)</span> such that <span class="math inline">\(a \cdot b = b \cdot a = e\)</span>, where <span class="math inline">\(e\)</span> is the identity element.</li>
+</ol>
+<p><strong>Ring:</strong> A <strong>Ring</strong> is a set <span class="math inline">\(R\)</span> equipped with two binary operations, usually called addition (+) and multiplication (·), such that:</p>
+<ol style="list-style-type: decimal">
+<li><strong><span class="math inline">\((R, +)\)</span></strong> is an abelian group. This means:
+<ul>
+<li><strong>Closure</strong>: For all <span class="math inline">\(a, b \in R\)</span>, <span class="math inline">\(a + b \in R\)</span>.</li>
+<li><strong>Associativity</strong>: For all <span class="math inline">\(a, b, c \in R\)</span>, <span class="math inline">\((a + b) + c = a + (b + c)\)</span>.</li>
+<li><strong>Identity Element (Additive Identity)</strong>: There exists an element <span class="math inline">\(0 \in R\)</span> such that for every element <span class="math inline">\(a \in R\)</span>, <span class="math inline">\(a + 0 = 0 + a = a\)</span>.</li>
+<li><strong>Inverse Element (Additive Inverse)</strong>: For each <span class="math inline">\(a \in R\)</span>, there exists an element <span class="math inline">\(-a \in R\)</span> such that <span class="math inline">\(a + (-a) = (-a) + a = 0\)</span>.</li>
+<li><strong>Commutativity</strong>: For all <span class="math inline">\(a, b \in R\)</span>, <span class="math inline">\(a + b = b + a\)</span>.</li>
+</ul></li>
+<li><strong><span class="math inline">\((R, ·)\)</span></strong> is a semigroup. This means:
+<ul>
+<li><strong>Closure</strong>: For all <span class="math inline">\(a, b \in R\)</span>, <span class="math inline">\(a \cdot b \in R\)</span>.</li>
+<li><strong>Associativity</strong>: For all <span class="math inline">\(a, b, c \in R\)</span>, <span class="math inline">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span>.</li>
+</ul></li>
+<li><strong>Distributive Property</strong>: Multiplication is distributive over addition. For all <span class="math inline">\(a, b, c \in R\)</span>:
+<ul>
+<li><span class="math inline">\(a \cdot (b + c) = (a \cdot b) + (a \cdot c)\)</span></li>
+<li><span class="math inline">\((a + b) \cdot c = (a \cdot c) + (b \cdot c)\)</span></li>
+</ul></li>
+</ol>
+<p><strong>Field:</strong> A <strong>Field</strong> is a set <span class="math inline">\(F\)</span> equipped with two binary operations, addition (+) and multiplication (·), such that:</p>
+<ol style="list-style-type: decimal">
+<li><strong><span class="math inline">\((F, +)\)</span></strong> is an abelian group (satisfies the same properties as above for addition in a ring).</li>
+<li><strong><span class="math inline">\((F \setminus \{0\}, ·)\)</span></strong> is an abelian group. This means:
+<ul>
+<li><strong>Closure</strong>: For all <span class="math inline">\(a, b \in F \setminus \{0\}\)</span>, <span class="math inline">\(a \cdot b \in F \setminus \{0\}\)</span>.</li>
+<li><strong>Associativity</strong>: For all <span class="math inline">\(a, b, c \in F \setminus \{0\}\)</span>, <span class="math inline">\((a \cdot b) \cdot c = a \cdot (b \cdot c)\)</span>.</li>
+<li><strong>Identity Element (Multiplicative Identity)</strong>: There exists an element <span class="math inline">\(1 \in F\)</span> (with <span class="math inline">\(1 \neq 0\)</span>) such that for every element <span class="math inline">\(a \in F \setminus \{0\}\)</span>, <span class="math inline">\(a \cdot 1 = 1 \cdot a = a\)</span>.</li>
+<li><strong>Inverse Element (Multiplicative Inverse)</strong>: For each <span class="math inline">\(a \in F \setminus \{0\}\)</span>, there exists an element <span class="math inline">\(b \in F \setminus \{0\}\)</span> such that <span class="math inline">\(a \cdot b = b \cdot a = 1\)</span>.</li>
+<li><strong>Commutativity</strong>: For all <span class="math inline">\(a, b \in F \setminus \{0\}\)</span>, <span class="math inline">\(a \cdot b = b \cdot a\)</span>.</li>
+</ul></li>
+<li><strong>Distributive Property</strong>: Multiplication is distributive over addition (same as in a ring).</li>
+</ol>
 </div>
 <div id="bertrands-paradox" class="section level2 hasAnchor" number="3.3">
 <h2><span class="header-section-number">3.3</span> Bertrand’s Paradox:<a href="minkowski-functionals.html#bertrands-paradox" class="anchor-section" aria-label="Anchor link to header"></a></h2>
 <p>The Bertrand paradox is a problem within the classical interpretation of probability theory. Joseph Bertrand introduced it in his work Calcul des probabilités (1889) as an example to show that the principle of indifference may not produce definite, well-defined results for probabilities if it is applied uncritically when the domain of possibilities is infinite.</p>
 <p>In an attempt to solve this problem, Henri Poincare suggested to overcome such ambiguities by tying probability measures to geometric groups. This was later developed systematically by Minkowski, which later evolved into the field of Integral Geometry, or Geometric Probability Theory.</p>
-<p>Reference for this section: Wikipedia: Bertrand Paradox (Probability) <span class="citation"><strong>wiki:Bertrand_paradox_?</strong>(probability)</span></p>
+<p>Reference for this section: Wikipedia: Bertrand Paradox (Probability) <span class="citation">[3]</span></p>
 <div id="problem-statement" class="section level3 hasAnchor" number="3.3.1">
 <h3><span class="header-section-number">3.3.1</span> Problem Statement<a href="minkowski-functionals.html#problem-statement" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>The Bertrand paradox is generally presented as follows: Consider an equilateral triangle inscribed in a circle. Suppose a chord of the circle is chosen at random. What is the probability that the chord is longer than a side of the triangle?</p>
@@ -189,49 +229,129 @@ Figure 3.1: Illustration showing the sample space construction for method 1
 Figure 3.2: Illustration showing the sample space construction for method 2
 </p>
 </div>
-<p>Randomly construct a chord, and the chord could have a perpendicular distance to the center of either greater than $ r 2$ or less than <span class="math inline">\(\frac r 2\)</span>, thus giving you a probility of the chord being longer than the side of the triangle as <span class="math inline">\(\frac 1 2\)</span>.</p>
+<p>Randomly construct a chord, and the chord could have a perpendicular distance to the center of either greater than <span class="math inline">\(\frac r 2\)</span> or less than <span class="math inline">\(\frac r 2\)</span>, thus giving you a probility of the chord being longer than the side of the triangle as <span class="math inline">\(\frac 1 2\)</span>.</p>
 </div>
 </div>
 <div id="a-diatribe-on-topolgy-and-functional-analysis" class="section level2 hasAnchor" number="3.4">
 <h2><span class="header-section-number">3.4</span> A Diatribe on Topolgy and Functional Analysis<a href="minkowski-functionals.html#a-diatribe-on-topolgy-and-functional-analysis" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>I don’t know how to title this section. Just throwing a few</p>
+<p>I don’t know how to title this section. Just throwing a few seemingly relevant topics on the wall.</p>
+<div id="manifold-with-a-group-of-transformations" class="section level3 hasAnchor" number="3.4.1">
+<h3><span class="header-section-number">3.4.1</span> Manifold with a Group of Transformations<a href="minkowski-functionals.html#manifold-with-a-group-of-transformations" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A manifold is a topological space that locally resembles Euclidean space. More precisely, each point on a manifold has a neighborhood that is homeomorphic (i.e., topologically equivalent) to an open subset of <span class="math inline">\(\mathbb{R}^n\)</span>.
 Manifolds can be equipped with additional structures, such as smoothness or differentiability, which make them important in many areas of mathematics and physics.</p>
 <p>A group of transformation <span class="math inline">\(G\)</span> acting on a manifold <span class="math inline">\(M\)</span> is a group where each element of <span class="math inline">\(G\)</span> corresponds to a transformation of the manifold. In other words, each element of <span class="math inline">\(G\)</span> is associated with a function that maps points on <span class="math inline">\(M\)</span> to other points on <span class="math inline">\(M\)</span>.</p>
 <p>The group <span class="math inline">\(G\)</span> acts on the manifold <span class="math inline">\(M\)</span> if there is a map:
-<span class="math display">\[ \phi: G \times M \to M \]</span>
-such that for each <span class="math inline">\(g \in G\)</span> and <span class="math inline">\(x \in M\)</span>, <span class="math inline">\(\phi(g, x)\)</span> gives a new point on <span class="math inline">\(M\)</span>. This map satisfies:
-1. <strong>Identity</strong>: The identity element <span class="math inline">\(e\)</span> of <span class="math inline">\(G\)</span> acts as the identity transformation on <span class="math inline">\(M\)</span>, meaning <span class="math inline">\(\phi(e, x) = x\)</span> for all <span class="math inline">\(x \in M\)</span>.
-2. <strong>Compatibility</strong>: For all <span class="math inline">\(g, h \in G\)</span> and <span class="math inline">\(x \in M\)</span>, <span class="math inline">\(\phi(g \cdot h, x) = \phi(g, \phi(h, x))\)</span>, where <span class="math inline">\(\cdot\)</span> denotes the group operation.</p>
-<p>A <strong>compact convex set</strong> is a fundamental concept in convex geometry and functional analysis. Here’s a detailed explanation:</p>
-<div id="convex-set" class="section level3 hasAnchor" number="3.4.1">
-<h3><span class="header-section-number">3.4.1</span> Convex Set<a href="minkowski-functionals.html#convex-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<span class="math display">\[ \phi: G \times M \to M \]</span> such that for each <span class="math inline">\(g \in G\)</span> and <span class="math inline">\(x \in M\)</span>, <span class="math inline">\(\phi(g, x)\)</span> gives a new point on <span class="math inline">\(M\)</span>. This map satisfies:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Identity</strong>: The identity element <span class="math inline">\(e\)</span> of <span class="math inline">\(G\)</span> acts as the identity transformation on <span class="math inline">\(M\)</span>, meaning <span class="math inline">\(\phi(e, x) = x\)</span> for all <span class="math inline">\(x \in M\)</span>.</li>
+<li><strong>Compatibility</strong>: For all <span class="math inline">\(g, h \in G\)</span> and <span class="math inline">\(x \in M\)</span>, <span class="math inline">\(\phi(g \cdot h, x) = \phi(g, \phi(h, x))\)</span>, where <span class="math inline">\(\cdot\)</span> denotes the group operation.</li>
+</ol>
+</div>
+<div id="compact-convex-set" class="section level3 hasAnchor" number="3.4.2">
+<h3><span class="header-section-number">3.4.2</span> Compact Convex Set<a href="minkowski-functionals.html#compact-convex-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A set <span class="math inline">\(C\)</span> in a vector space is called <strong>convex</strong> if, for any two points <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> in <span class="math inline">\(C\)</span>, the line segment joining <span class="math inline">\(x\)</span> and <span class="math inline">\(y\)</span> is also contained in <span class="math inline">\(C\)</span>. More formally, <span class="math inline">\(C\)</span> is convex if, for every <span class="math inline">\(x, y \in C\)</span> and for every <span class="math inline">\(\lambda\)</span> in the interval <span class="math inline">\([0,1]\)</span>, the point <span class="math inline">\(\lambda x + (1 - \lambda) y\)</span> is in <span class="math inline">\(C\)</span>.</p>
-</div>
-<div id="compact-set" class="section level3 hasAnchor" number="3.4.2">
-<h3><span class="header-section-number">3.4.2</span> Compact Set<a href="minkowski-functionals.html#compact-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>A set <span class="math inline">\(K\)</span> in a topological space (like a Euclidean space) is called <strong>compact</strong> if every open cover of <span class="math inline">\(K\)</span> has a finite subcover. In simpler terms, <span class="math inline">\(K\)</span> is compact if it is closed (contains all its limit points) and bounded (fits within some finite region). In Euclidean spaces, compactness is often characterized by these two conditions: a set is compact if and only if it is closed and bounded.</p>
-</div>
-<div id="compact-convex-set" class="section level3 hasAnchor" number="3.4.3">
-<h3><span class="header-section-number">3.4.3</span> Compact Convex Set<a href="minkowski-functionals.html#compact-convex-set" class="anchor-section" aria-label="Anchor link to header"></a></h3>
 <p>Combining these two ideas:</p>
 <ul>
 <li>A <strong>compact convex set</strong> is a set that is both convex and compact.</li>
 <li><strong>Convexity</strong> ensures that any line segment between two points in the set remains within the set.</li>
 <li><strong>Compactness</strong> ensures that the set is bounded and closed, so it does not stretch out infinitely and contains all its boundary points.</li>
 </ul>
-<p>Examples of Compact Convex Sets</p>
-<ol style="list-style-type: decimal">
-<li><p><strong>Closed Interval in <span class="math inline">\(\mathbb{R}\)</span></strong>: The set <span class="math inline">\([a, b]\)</span> where <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> are real numbers with <span class="math inline">\(a \leq b\)</span> is a compact convex set in <span class="math inline">\(\mathbb{R}\)</span>. It is convex because any point between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span> is also between <span class="math inline">\(a\)</span> and <span class="math inline">\(b\)</span>, and it is compact because it is closed and bounded.</p></li>
-<li><p><strong>Closed Disk in <span class="math inline">\(\mathbb{R}^2\)</span></strong>: The set <span class="math inline">\(\{(x, y) \in \mathbb{R}^2 \mid x^2 + y^2 \leq r^2\}\)</span> for some radius <span class="math inline">\(r &gt; 0\)</span> is a compact convex set in <span class="math inline">\(\mathbb{R}^2\)</span>. It is convex because any line segment between two points within the disk remains inside the disk, and it is compact because it is bounded and closed.</p></li>
-<li><p><strong>Compact Convex Sets in Higher Dimensions</strong>: In higher-dimensional Euclidean spaces <span class="math inline">\(\mathbb{R}^n\)</span>, compact convex sets are similarly characterized. For example, a closed polytope (like a closed cube or tetrahedron) in <span class="math inline">\(\mathbb{R}^n\)</span> is a compact convex set.</p></li>
-</ol>
 </div>
 </div>
 <div id="hadwigers-theorem" class="section level2 hasAnchor" number="3.5">
 <h2><span class="header-section-number">3.5</span> Hadwiger’s Theorem<a href="minkowski-functionals.html#hadwigers-theorem" class="anchor-section" aria-label="Anchor link to header"></a></h2>
-<p>In integral geometry, Hadwiger’s theorem characterizes the valuations on convex bodies on <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
-<p>Usually,</p>
+<p>In integral geometry, Hadwiger’s theorem characterizes the valuations on convex bodies on <span class="math inline">\(\mathbb{R}^n\)</span>. Reference for this section: <span class="citation">[4]</span></p>
+<p>We’re looking at a Manifold with a group of transformations <span class="math inline">\(G\)</span>. Usually we take a <span class="math inline">\(d\)</span> dimensional Euclidean space with a group of transformations being Rotations and translations.
+Consider the set of <span class="math inline">\(\mathbb{K}\)</span> convex bodies embedded in this space, and as an extension, a convex ring <span class="math inline">\(R\)</span> of all finite unions of the convex bodies. Suppose you want to characterize a body <span class="math inline">\(B\)</span> on the convex ring, you look for functionals <span class="math inline">\(M\)</span> which satisfy the following requirements:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Motion Invariance:</strong> The functional is Independent of the Body’s Position and Orientation in space, ie is Independent of the rotation and translation transformations.
+<span class="math display">\[\begin{equation}M(gB) = M(B) \:\:\: \forall g \in G, B \in R\end{equation}\]</span></li>
+<li><strong>Additivity:</strong> Uniting two bodies adds their functionals, minus the functional of the intersection. This is basically the inclusion-exclusion principle applied here.
+<span class="math display">\[\begin{equation}M\left(B_{i\ }\cup B_j\ \right)+M\left(B_{i\ }\cap B_j\right)=\ M\left(B_i\right)\ +\ M\left(B_j\right)\end{equation}\]</span></li>
+<li><strong>Conditional Continuity:</strong> The functions of convex approximations to a convex body converge to the functionals of the body.
+<span class="math display">\[\begin{equation}M(K_i) \rightarrow M(K)  \text{ as } K_i \rightarrow K \text{ for } K, K_i \in \mathbb{K}\end{equation}\]</span></li>
+</ol>
+<p>Given these conditions, the Hadwiger’s Theorem states that given a <span class="math inline">\(d\)</span> dimensional space, there are only <span class="math inline">\(d+1\)</span> such functionals that are independent, meaning Minkowski Functionals are unique and complete. (This statement needs proof)</p>
+<p><strong>Hadwiger’s Theorem:</strong> Let <span class="math inline">\(R\)</span> be the convex ring embedded in <span class="math inline">\(d\)</span>-dimensional space. Then there exists <span class="math inline">\(d+1\)</span> functionals <span class="math inline">\(M_\mu, \:\: \mu = 0,... d\)</span> on <span class="math inline">\(R\)</span> such that any functional <span class="math inline">\(M\)</span> on <span class="math inline">\(R\)</span> is motion invariant, additive, and conditionally continious can be expressed as a linear combination of the <span class="math inline">\(M_\mu\)</span>.
+<span class="math display">\[\begin{equation}
+M = \sum _ {\mu = 0} ^{d} c_\mu M_\mu
+\end{equation}\]</span></p>
+<p>The most common notations are <span class="math inline">\(M_\mu, V_\mu, \bar {V _\mu} \text{ and } W_\mu\)</span></p>
+<p><span class="math display">\[\begin{equation}
+V_\mu = \frac{\omega_{d-\mu}}{\omega_d} M_\mu
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+\bar{V}_{d-\mu} = \frac{\omega_{d-\mu}}{\omega_d} \begin{pmatrix} d \\ \mu \end{pmatrix} M_\mu
+\end{equation}\]</span></p>
+<p><span class="math display">\[\begin{equation}
+W_\mu = \frac{\omega_\mu \omega_d}{\omega_{d - \mu}} M_\mu
+\end{equation}\]</span></p>
+<p>Where the term <span class="math inline">\(\omega_\mu\)</span> represents the volume of the <span class="math inline">\(\mu\)</span> dimensional unit ball, given by the following formula:
+<span class="math display">\[\begin{equation}
+\omega_\mu = \frac{\pi ^ \frac{\mu}{2}}{\Gamma(1 + \frac d 2)}
+\end{equation}\]</span></p>
+<p>In the three dimensional Eucledian space, the functionals have a direct geometric interpretation, which is listed out in the below table.</p>
+<table>
+<colgroup>
+<col width="16%" />
+<col width="3%" />
+<col width="16%" />
+<col width="16%" />
+<col width="16%" />
+<col width="15%" />
+<col width="16%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>geometric quantity</th>
+<th><span class="math inline">\(\mu\)</span></th>
+<th><span class="math inline">\(M_\mu\)</span></th>
+<th><span class="math inline">\(V_\mu\)</span></th>
+<th><span class="math inline">\(W_\mu\)</span></th>
+<th><span class="math inline">\(\bar{V}_{3 - \mu}\)</span></th>
+<th><span class="math inline">\(\omega_\mu\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><span class="math inline">\(V\)</span> volume</td>
+<td>0</td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(V\)</span></td>
+<td><span class="math inline">\(V\)</span></td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(A\)</span> surface</td>
+<td>1</td>
+<td><span class="math inline">\(\frac{A}{8}\)</span></td>
+<td><span class="math inline">\(\frac{A}{6}\)</span></td>
+<td><span class="math inline">\(\frac{A}{3}\)</span></td>
+<td><span class="math inline">\(\frac{A}{2}\)</span></td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td><span class="math inline">\(H\)</span> mean curvature</td>
+<td>2</td>
+<td><span class="math inline">\(\frac{H}{2\pi^2}\)</span></td>
+<td><span class="math inline">\(\frac{H}{3\pi}\)</span></td>
+<td><span class="math inline">\(\frac{H}{3}\)</span></td>
+<td><span class="math inline">\(\frac{H}{\pi}\)</span></td>
+<td><span class="math inline">\(\pi\)</span></td>
+</tr>
+<tr class="even">
+<td><span class="math inline">\(\chi\)</span> Euler characteristic</td>
+<td>3</td>
+<td><span class="math inline">\(\frac{3\chi}{4\pi}\)</span></td>
+<td><span class="math inline">\(\chi\)</span></td>
+<td><span class="math inline">\(\frac{4\pi\chi}{3}\)</span></td>
+<td><span class="math inline">\(\chi\)</span></td>
+<td><span class="math inline">\(\frac{4\pi}{3}\)</span></td>
+</tr>
+</tbody>
+</table>
 
 </div>
 </div>
@@ -283,7 +403,7 @@ gitbook.start({
 "link": null,
 "text": null
 },
-"download": null,
+"download": ["_main.pdf"],
 "search": {
 "engine": "fuse",
 "options": null
